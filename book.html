@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Room</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar" style="background-color: #dba3c8; height: 60px;">
+        <div class="container-fluid" style="padding: 0 20px;">
+            <a class="navbar-brand" href="#">
+                <img src="serena.png" alt="Logo" style="height: 70px; width: auto; margin-top: -10px;">
+            </a>
+            <div class="d-flex">
+                <a href="signupp.html" class="btn mb-4" style="color: #fff; background-color: #331c2a; border-color: #331c2a; margin-right: 8px; font-size: 0.9rem;">Sign Up</a>
+                <a href="Signin.html" class="btn mb-4" style="color: #fff; background-color: #331c2a; border-color: #331c2a; font-size: 0.9rem;">Log In</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-3" style="max-width: 1200px; display: flex; align-items: center; justify-content: space-between;">
+        <!-- Left Section -->
+        <div style="flex: 1; margin-right: 20px; text-align: center;">
+            <img src="https://img.freepik.com/free-photo/luxury-classic-modern-bedroom-suite-hotel_105762-1787.jpg" alt="Room Image" style="width: 100%; height: auto; border-radius: 8px; margin-top: -220px;">
+            <div style="font-size: 1rem; margin-top: 10px; color: #6c757d; text-align: left; margin-left: 20px;">
+                A cozy room with modern amenities, ideal for a serene mountain retreat in Murree.
+            </div>
+        </div>
+
+        <!-- Booking Form -->
+        <form id="bookingForm" action="pay.html" onsubmit="return validateForm()"></form>
+        
+        <!-- Booking Form -->
+<div style="flex: 1; background-color: #ffffff; padding: 20px; border-radius: 8px;">
+    <h2 class="mb-3" style="text-align: center;">Book a Room</h2>
+    <form id="bookingForm" action="pay.html" onsubmit="return validateForm()">
+        <div class="form-row">
+            <div class="col">
+                <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" class="form-control" id="email" placeholder="example@example.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="text" class="form-control" id="phone" placeholder="(000) 000-0000" oninput="formatPhoneNumber(this)" required>
+        </div>
+
+        <div class="form-group">
+            <label for="dateFrom">Date From</label>
+            <input type="date" class="form-control" id="dateFrom" required>
+        </div>
+
+        <div class="form-group">
+            <label for="dateTo">Date To</label>
+            <input type="date" class="form-control" id="dateTo" required>
+        </div>
+
+        <div class="form-group">
+            <label for="numPeople">No. of People</label>
+            <input type="number" class="form-control" id="numPeople" min="1" required>
+        </div>
+
+        <div class="form-group">
+            <label for="comments">Comments</label>
+            <textarea class="form-control" id="comments" rows="3"></textarea>
+        </div>
+
+        <button type="submit" class="btn mt-2" style="background-color: #91547c; color: #fff; height: 45px; font-weight: bold;">Book Now</button>
+    </form>
+</div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer style="background-color: #331c2a; color: #fff; padding: 20px 0; margin-top: 50px;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px;">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>SERENA VISTA INN</h5>
+                    <p>Experience modern comforts with elegance in the heart of Murree.</p>
+                </div>
+                <div class="col-md-2">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" style="color: #fff;">Home</a></li>
+                        <li><a href="#" style="color: #fff;">Rooms</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function validateForm() {
+            const firstName = document.getElementById("firstName").value.trim();
+            const lastName = document.getElementById("lastName").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const dateFrom = document.getElementById("dateFrom").value;
+            const dateTo = document.getElementById("dateTo").value;
+            const numPeople = document.getElementById("numPeople").value;
+
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            const phonePattern = /^\(\d{3}\) \d{3}-\d{4}$/;
+
+            if (!firstName || !lastName) {
+                alert("Please enter both First Name and Last Name.");
+                return false;
+            }
+
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            if (!phonePattern.test(phone)) {
+                alert("Please enter a valid phone number in the format (000) 000-0000.");
+                return false;
+            }
+
+            if (new Date(dateFrom) > new Date(dateTo)) {
+                alert("'Date From' cannot be after 'Date To'.");
+                return false;
+            }
+
+            if (!numPeople || numPeople <= 0) {
+                alert("Please enter a valid number of people.");
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            return true;
+        }
+
+        function formatPhoneNumber(input) {
+            let phone = input.value.replace(/\D/g, "");
+            if (phone.length > 3 && phone.length <= 6) {
+                input.value = `(${phone.slice(0, 3)}) ${phone.slice(3)}`;
+            } else if (phone.length > 6) {
+                input.value = `(${phone.slice(0, 3)}) ${phone.slice(3, 6)}-${phone.slice(6, 10)}`;
+            } else {
+                input.value = phone;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

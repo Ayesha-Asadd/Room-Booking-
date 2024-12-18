@@ -1,0 +1,65 @@
+<?php
+session_start(); // Start session to access session data
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Successful</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            margin-top: 100px;
+            flex: 1;
+        }
+        .btn-custom {
+            background-color: #91547c;
+            color: white;
+        }
+        footer {
+            background-color: #331c2a;
+            color: white;
+            padding: 10px 0;
+            margin-top: auto; /* Pushes footer to the bottom */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container text-center">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title" style="font-weight: bold; color: #5f6368;">Your Booking Was Successful!</h3>
+                    <p class="card-text">Thank you for booking with Serena Vista Inn! Your reservation has been successfully processed.</p>
+                    
+                    <!-- Additional options -->
+                    <p>If you need any assistance, feel free to contact us.</p>
+
+                    <!-- Button to go back to homepage -->
+                    <a href="LandinPage.html" class="btn btn-custom mt-3">Make Another Booking</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center">
+    <p>&copy; 2024 Serena Vista Inn. All Rights Reserved.</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

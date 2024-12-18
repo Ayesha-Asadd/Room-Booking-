@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headspace Sign Up</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body style="background-color: #fff8f1; font-family: Arial, sans-serif; margin: 0; height: 100vh; overflow: hidden;">
+
+ <!-- Main Container -->
+<div class="d-flex" style="width: 100%; height: calc(100vh - 60px);">
+
+    <!-- Left Side (Image Section) -->
+    <div class="flex-fill d-flex align-items-center justify-content-center" style="overflow: hidden;">
+        <img src="https://plus.unsplash.com/premium_photo-1661929519129-7a76946c1d38?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bHV4dXJ5JTIwaG90ZWx8ZW58MHx8MHx8fDA%3D.jpg" 
+             alt="Left Side Image" 
+             style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+
+    <!-- Right Side (Form Section) -->
+    <div class="flex-fill p-4" style="background-color: #ffffff; width:50%; height: 100%; display: flex; justify-content: center; align-items: center;">
+        <!-- Sign Up Form Content -->
+        <div class="container d-flex flex-column align-items-center mt-3 mb-0">
+            
+            <!-- Headspace Logo -->
+            <img src="serena.png"  
+                 style="width: 150px; height:150px;" alt="Headspace Logo">
+
+            <!-- Page Title -->
+            <h3 class="mb-1 mt-0" style="font-weight: bold;">Sign Up</h3>
+
+            <!-- Sign Up Form -->
+            <form class="w-100" style="max-width: 500px;" action="signupp.php" method="POST" onsubmit="return validatePassword()">
+                
+                <!-- Full Name Field -->
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+
+                <!-- Email Field -->
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <!-- Password Field -->
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password (8+ characters)" required>
+                    <small id="passwordHelp" class="form-text text-danger"></small>
+                </div>
+
+                <!-- Confirm Password Field -->
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirm-password" name="confirm_password" placeholder="Confirm your password" required>
+                </div>
+
+                <!-- Show Password Checkbox -->
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="showPassword">
+                    <label class="form-check-label" for="showPassword">Show Password</label>
+                </div>
+
+                <!-- Sign Up Button -->
+                <button type="submit" class="btn btn-block" style="background-color: #91547c; color: #fff; height: 45px; font-weight: bold;">SIGN UP</button>
+
+                <!-- Already Have Account Link -->
+                <div class="text-center mt-3" style="width: 100%;">
+                    <small>Already have an account? <a href="Signin.html" style="color: #91547c;">Sign In</a></small>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    function validatePassword() {
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirm-password').value;
+        const passwordHelp = document.getElementById('passwordHelp');
+        const errors = [];
+    
+        // Validate password requirements
+        if (password.length < 8) {
+            errors.push("Password must be at least 8 characters long.");
+        }
+        if (!/[A-Z]/.test(password)) {
+            errors.push("Add an uppercase letter to your password.");
+        }
+        if (!/[a-z]/.test(password)) {
+            errors.push("Add a lowercase letter to your password.");
+        }
+        if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+            errors.push("Add a special character to your password.");
+        }
+        if (!/\d/.test(password)) {
+            errors.push("Add a number to your password.");
+        }
+    
+        // Validate password match
+        if (password !== confirmPassword) {
+            errors.push("Passwords do not match.");
+        }
+    
+        // Display all errors
+        if (errors.length > 0) {
+            passwordHelp.textContent = errors.join(" "); // Join all error messages into one string
+            return false; // Prevent form submission
+        }
+    
+        passwordHelp.textContent = ""; // Clear error message
+        return true; // Allow form submission
+    }
+    
+    // Show Password toggle logic
+    document.getElementById('showPassword').addEventListener('change', function () {
+        const passwordField = document.getElementById('password');
+        const confirmPasswordField = document.getElementById('confirm-password');
+        const type = this.checked ? 'text' : 'password';
+        passwordField.type = type;
+        confirmPasswordField.type = type;
+    });
+</script>
+    <!-- Bootstrap and Font Awesome JS -->
+    <script src='https://code.jquery.com/jquery-3.5.1.slim.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'></script>
+</body>
+</html>

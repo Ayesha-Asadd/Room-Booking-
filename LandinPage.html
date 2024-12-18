@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Booking Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+ <!-- Navbar -->
+<nav class="navbar" style="background-color: #dba3c8; height: 60px;">
+  <div class="container-fluid" style="padding: 0 20px;">
+    <a class="navbar-brand" href="#">
+      <img src="serena.png" 
+           alt="serena.png" style="height: 70px; width: auto; margin-top: -10px;"> <!-- Increased logo height and adjusted margin -->
+    </a>
+
+    <div class="d-flex">
+      <a href="signupp.html" class="btn mb-4" style="color: #fff; background-color: #331c2a;  margin-right: 8px; font-size: 0.9rem;">Sign Up</a>
+      <a href="Signin.html" class="btn mb-4" style="color: #fff; background-color: #331c2a;  font-size: 0.9rem;">Log In</a>
+    </div>
+  </div>
+</nav>
+
+  <section><div class="container" ></div></section>
+ 
+
+  <!-- Image Slider -->
+  <div id="hotelSlider" class="carousel slide" data-bs-ride="carousel" style="width: 100%; overflow: hidden;">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://imengine.public.prod.sbp.infomaker.io/?uuid=38756713-9f5c-5b4c-81f5-6b2f6c393d53&function=cropresize&type=preview&source=false&q=75&crop_w=0.99999&crop_h=0.8427&width=6016&height=3384&x=1.0E-5&y=0.14419.jpg" class="d-block w-100" alt="Luxury Hotel Room" style="opacity: 0.7; height: 330px; object-fit: cover;">
+        <div class="carousel-caption d-flex flex-column align-items-center" style="background: rgba(0,0,0,0.5); padding: 20px;">
+          <h3 style="color: #fff;">Book Your Dream Stay</h3>
+          <p style="color: #fff;">Discover unparalleled luxury and comfort</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://sentientfurniture.com/wp-content/uploads/2019/12/custom_furniture_paramount_hotel_nyc_sentient_project_lobby2-scaled.jpg" class="d-block w-100" alt="Luxury Bedroom" style="opacity: 0.7; height: 330px; object-fit: cover;">
+        <div class="carousel-caption d-flex flex-column align-items-center" style="background: rgba(0,0,0,0.5); padding: 20px;">
+          <h3 style="color: #fff;">Your Comfort, Our Priority</h3>
+          <p style="color: #fff;">Stay in a room designed for relaxation and elegance</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://lanelayhall.co.uk/assets/backgrounds/SPAWEBSITE-16.jpg" class="d-block w-100" alt="Hotel Room Interior" style="opacity: 0.7; height: 330px; object-fit: cover;">
+        <div class="carousel-caption d-flex flex-column align-items-center" style="background: rgba(0,0,0,0.5); padding: 20px;">
+          <h3 style="color: #fff;">Experience Serenity</h3>
+          <p style="color: #fff;">A perfect escape in the heart of the city</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://plus.unsplash.com/premium_photo-1661964071015-d97428970584?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aG90ZWx8ZW58MHx8MHx8fDA%3D.jpg" class="d-block w-100" alt="Elegant Hotel Room" style="opacity: 0.7; height: 330px; object-fit: cover;">
+        <div class="carousel-caption d-flex flex-column align-items-center" style="background: rgba(0,0,0,0.5); padding: 20px;">
+          <h3 style="color: #fff;">Indulge in Luxury</h3>
+          <p style="color: #fff;">Book today for an unforgettable experience</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#hotelSlider" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#hotelSlider" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+<section><div class="container" style="min-height: 20px;"></div></section>
+ 
+
+
+<section>
+  <!-- 4 Boxes Section -->
+  <div class="container my-5">
+    <h2 class="text-left">Book Now</h2>
+    <div class="container" style="min-height: 20px;"></div>
+    <div class="row">
+      <div class="col-md-3 mb-4">
+        <div class="card">
+          <img src="https://fancyhouse-design.com/wp-content/uploads/2023/11/The-master-suite-exudes-contemporary-luxury-with-its-sleek-low-profile-headboard..jpg" class="card-img-top" alt="Room 1" style="height: 200px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Luxury Room</h5>
+            <p class="card-text">A spacious and elegant room with stunning views.</p>
+            <a href="descript.html" class="btn" style="background-color: #91547c;   color: white; ">Details</a>
+
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-3 mb-4">
+        <div class="card">
+          <img src="data:image/jpeg;base64,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" class="card-img-top" alt="Room 2" style="height: 200px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Standard Room</h5>
+            <p class="card-text">Affordable yet comfortable with all necessary amenities.</p>
+            <a href="descript.html" class="btn" style="background-color: #91547c; color: white; ">Details</a>
+
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-3 mb-4">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCKF5_HKQSSA1UVIT1E0HWT2oQeVivQBMR3g&s" class="card-img-top" alt="Room 3" style="height: 200px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Suite</h5>
+            <p class="card-text">Experience luxury with a private suite and exclusive services.</p>
+            <a href="descript.html" class="btn" style="background-color: #91547c; color: white; ">Details</a>
+
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-3 mb-4">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuQnpgsWhO1ovp6gHvZU2S9AapVwjK9UOnGw&s" class="card-img-top" alt="Room 4" style="height: 200px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title">Family Room</h5>
+            <p class="card-text">Perfect for family stays with comfortable amenities.</p>
+            <a href="descript.html" class="btn" style="background-color: #91547c; color: white; border-color: #331c2a;">Details</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  
+
+  <!-- Serena Vista Inn Section (Image on left, text on right) -->
+<div class="container-fluid my-5" style="background-color: #ddb5cf;">
+  <div class="container py-4" style=" border-radius: 5px; opacity: 0.95;">
+    <div class="row align-items-center">
+      <!-- Image on the left -->
+      <div class="col-md-6 mb-4 mt-4">
+        <img src="serena.png" alt="Serena Vista Inn" class="img-fluid">
+      </div>
+      <!-- Text on the right -->
+      <div class="col-md-6 mb-4">
+        <h2>Welcome to Serena Vista Inn</h2>
+        <p>At Serena Vista Inn, we offer a serene escape with luxurious rooms, unparalleled service, and breathtaking views. Whether you're here for business or pleasure, our welcoming staff ensures an unforgettable stay. Enjoy top-notch amenities and exceptional comfort, designed for your ultimate relaxation.</p>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+
+  <!-- Hotel Facilities Section -->
+<section>
+  <div class="container my-5">
+    <h2 class="text-left">Hotel Facilities</h2>
+    <div class="container" style="min-height: 20px;"></div>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="https://q-xx.bstatic.com/xdata/images/hotel/840x460/595407379.jpg?k=09bc4f703ab7ea71d0ec02ad6c490abb05de64d53d155c8eef5807f37513d35f&o=" class="card-img-top" alt="Facility 1" style="width:100%; height:200px; object-fit:cover;">
+            <div class="card-body">
+              <h5 class="card-title">Swimming Pool</h5>
+              <p class="card-text">Relax and unwind in Serena Vista Inn luxurious pool area.</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXA2EpNA_8wrWG1jssUCCM5IGmZfRXjJgsOA&s" class="card-img-top" alt="Facility 2" style="width:100%; height:200px; object-fit:cover;">
+            <div class="card-body">
+              <h5 class="card-title">Gym</h5>
+              <p class="card-text">Stay fit with our state-of-the-art fitness center.</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="https://q-xx.bstatic.com/xdata/images/xphoto/608x352/45450087.webp?k=a681c729844a047384fe83fd5df2c848e9551b4f516913edbb3640bff9bae52d&o=" class="card-img-top" alt="Facility 3" style="width:100%; height:200px; object-fit:cover;">
+            <div class="card-body">
+              <h5 class="card-title">Spa</h5>
+              <p class="card-text">Indulge in a soothing spa treatment for ultimate relaxation.</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/577437733.jpg?k=cf9e94490db8e8b57f41a55452da510632b1a2b555c8ffb44e740d26ca7fa642&o=&hp=1" class="card-img-top" alt="Facility 4" style="width:100%; height:200px; object-fit:cover;">
+            <div class="card-body">
+              <h5 class="card-title">Restaurant</h5>
+              <p class="card-text">Enjoy a variety of delicious dishes at our 5-star restaurant.</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTjGm6EhmDKBUymmsJaPnRExj3vnI9bC1K9w&s" class="card-img-top" alt="Facility 5" style="width:100%; height:200px; object-fit:cover;">
+            <div class="card-body">
+              <h5 class="card-title">Free Wi-Fi</h5>
+              <p class="card-text">Stay connected with our high-speed Wi-Fi access throughout the hotel.</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="https://q-xx.bstatic.com/xdata/images/hotel/max500/594791443.jpg?k=adfd80905bcc4fe44d44e074c8e70f965db663e5c780bb775cb3ef517511fc99&o=" class="card-img-top" alt="Facility 6" style="width:100%; height:200px; object-fit:cover;">
+            <div class="card-body">
+              <h5 class="card-title">24/7 Concierge</h5>
+              <p class="card-text">Our dedicated concierge service is available around the clock to assist you.</p>
+            </div>
+          </div>
+        </div>
+      </div></section>
+
+    <!-- Serena Vista Inn Section (Text on left, image on right) -->
+  <section>
+<div class="container-fluid my-5" style="background-color: #ddb5cf;">
+  <div class="container py-4">
+    <div class="row align-items-center">
+      <!-- Text on the left -->
+      <div class="col-md-6 mb-4">
+        <h2>Experience Luxury at Serena Vista Inn</h2>
+        <p>Escape to Serena Vista Inn, where elegance meets comfort. Our boutique hotel offers stunning rooms, attentive service, and spectacular views. Whether you're traveling for business or leisure, our team is dedicated to providing you with an exceptional stay. Indulge in premium amenities, designed to ensure you relax and recharge.</p>
+      </div>
+      <!-- Image on the right -->
+      <div class="col-md-6 mb-4">
+        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/225022989.jpg?k=1af0cf8449f65ec7a66a3a6313cddd825c30d0fcbcfaf0b189089207e27d9d4a&o=&hp=1.jpg" alt="Serena Vista Inn" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</div></section>
+
+
+  
+ 
+  
+<!-- Why Choose Serena Vista Inn Section -->
+<section>
+<div class="container my-5">
+    <h2 class="text-center mb-4" style="font-size: 2rem; font-weight: bold;">Why Choose Serena Vista Inn?</h2>
+    <div class="row">
+      <!-- Box 1: Luxurious Rooms -->
+      <div class="col-md-4 mb-4">
+        <div class="card" style="border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+          <img src="https://image-tc.galaxy.tf/wijpeg-dwdrp3tgbjnhpah4hwsjvq3jr/ish-junior-suite-3.jpg?width=1600&height=1066" class="card-img-top" alt="Luxurious Rooms" style="border-top-left-radius: 10px; border-top-right-radius: 10px; object-fit: cover; width: 100%; height: 250px;">
+          <div class="card-body" style="padding: 20px; background-color: #f8f9fa;">
+            <h5 class="card-title" style="font-size: 1.25rem; font-weight: bold;">Luxurious Rooms</h5>
+            <p class="card-text">Experience ultimate comfort with our spacious, elegantly designed rooms, featuring modern amenities and stunning views.</p>
+            <div style="font-weight: bold; color: #91547c;">Rating: ★★★★☆</div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Box 2: Excellent Service -->
+      <div class="col-md-4 mb-4">
+        <div class="card" style="border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+          <img src="https://5.imimg.com/data5/SELLER/Default/2024/2/387738522/CS/FI/YC/152859960/hotel-reservation-services-500x500.png" class="card-img-top" alt="Excellent Service" style="border-top-left-radius: 10px; border-top-right-radius: 10px; object-fit: cover; width: 100%; height: 250px;">
+          <div class="card-body" style="padding: 20px; background-color: #f8f9fa;">
+            <h5 class="card-title" style="font-size: 1.25rem; font-weight: bold;">Excellent Service</h5>
+            <p class="card-text">Our dedicated team of Serene Vista Inn provides personalized service to make your stay memorable. From check-in to check-out, we are here for you.</p>
+            <div style="font-weight: bold; color: #91547c;">Rating: ★★★★★</div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Box 3: Relaxing Amenities -->
+      <div class="col-md-4 mb-4">
+        <div class="card" style="border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+          <img src="https://webrezpro.com/wp-content/uploads/2019/02/HotelAmenities.jpg" class="card-img-top" alt="Relaxing Amenities" style="border-top-left-radius: 10px; border-top-right-radius: 10px; object-fit: cover; width: 100%; height: 250px;">
+          <div class="card-body" style="padding: 20px; background-color: #f8f9fa;">
+            <h5 class="card-title" style="font-size: 1.25rem; font-weight: bold;">Relaxing Amenities</h5>
+            <p class="card-text">Unwind with our top-of-the-line amenities, including a spa, gym, and pool, designed to provide you with the perfect relaxation experience.</p>
+            <div style="font-weight: bold; color: #91547c;">Rating: ★★★★☆</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div></section>
+
+
+<section>
+  <!-- Contact Us Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4" style="font-size: 2rem; font-weight: bold;">Contact Us</h2>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <form action="#" method="POST" style="border: 1px solid #ddd; padding: 20px; border-radius: 5px; background-color: #f8f9fa;">
+          <!-- Name Input -->
+          <div class="mb-3">
+            <label for="name" class="form-label" style="font-weight: bold;">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required style="border: 1px solid #ccc;">
+          </div>
+          <!-- Email Input -->
+          <div class="mb-3">
+            <label for="email" class="form-label" style="font-weight: bold;">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required style="border: 1px solid #ccc;">
+          </div>
+          <!-- Subject Input -->
+          <div class="mb-3">
+            <label for="subject" class="form-label" style="font-weight: bold;">Subject</label>
+            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required style="border: 1px solid #ccc;">
+          </div>
+          <!-- Message Input -->
+          <div class="mb-3">
+            <label for="message" class="form-label" style="font-weight: bold;">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your Message" required style="border: 1px solid #ccc;"></textarea>
+          </div>
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-primary" style="width: 100%; background-color: #91547c; border: none; font-weight: bold;">Submit</button>
+        </form>
+      </div>
+      <div class="col-md-6 mb-4">
+        <div style="padding: 20px; background-color: #f8f9fa; border-radius: 5px; border: 1px solid #ddd;">
+          <h4 style="font-weight: bold;">Our Location</h4>
+          <p>Serena Vista Inn</p>
+          <p>1234 Scenic Drive, Serena City, 56789</p>
+          <p>Email: info@serenavista.com</p>
+          <p>Phone: (123) 456-7890</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+ <!-- Footer Section -->
+<footer style="background-color: #331c2a; color: #fff; padding: 20px 0; margin-top: 50px; width: 100%;">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px;">
+      <div class="row">
+          <!-- Logo and Description Section -->
+          <div class="col-md-4">
+              <h5 style="font-weight: bold; color: #FFFF;" class="mb-2">SERENA VISTA INN</h5>
+              <p>At Serena Vista Inn, we combine elegance with exceptional service to ensure a memorable stay. Enjoy personalized experience and modern comforts in the heart of Murree.</p>
+          </div>
+
+          <!-- Quick Links Section -->
+          <div class="col-md-2">
+              <h5 style="font-weight: bold;" class="mb-2">Quick Links</h5>
+              <ul class="list-unstyled">
+                  <li><a href="#" style="color: #fff; text-decoration: none;">Home</a></li>
+                  <li><a href="#" style="color: #fff; text-decoration: none;">Rooms</a></li>
+                  <li><a href="#" style="color: #fff; text-decoration: none;">Blogs</a></li>
+                  <li><a href="#" style="color: #fff; text-decoration: none;">FAQs</a></li>
+                  <li><a href="#" style="color: #fff; text-decoration: none;">Contact Us</a></li>
+              </ul>
+          </div>
+
+          <!-- Other Links Section -->
+          <div class="col-md-2">
+              <h5 style="font-weight: bold;" class="mb-2">Other Links</h5>
+              <ul class="list-unstyled">
+                  <li><a href="#" style="color: #fff; text-decoration: none;">About Hotel</a></li>
+                  <li><a href="#" style="color: #fff; text-decoration: none;">Privacy Policy</a></li>
+              </ul>
+          </div>
+
+          <!-- Contact Information Section -->
+          <div class="col-md-4">
+              <h5 style="font-weight: bold;" class="mb-2">Contact Information</h5>
+              <p><i class="fas fa-map-marker-alt"></i> Kashmir point, Plot 29B Viewforth Rd, Murree, Rawalpindi, Khyber Pakhtunkhwa 47150</p>
+              <p><i class="fas fa-phone-alt"></i> +92 311 1134672</p>
+              <p><i class="fas fa-envelope"></i> info@serenavistainn.com</p>
+              <div>
+                  <!-- Social Media Icons -->
+                  <a href="#" style="color: #fff; margin-right: 10px;"><i class="fab fa-facebook"></i></a>
+                  <a href="#" style="color: #fff; margin-right: 10px;"><i class="fab fa-instagram"></i></a>
+                  <a href="#" style="color: #fff; margin-right: 10px;"><i class="fab fa-twitter"></i></a>
+                  <a href="#" style="color: #fff; margin-right: 10px;"><i class="fab fa-tiktok"></i></a>
+              </div>
+          </div>
+      </div>
+
+      <!-- Copyright Section -->
+      <div class="text-center mt-3" style="color: #fff;">
+          © Copyright Serena Vista Inn 2024. All rights reserved.
+      </div>
+  </div>
+</footer>
+    
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

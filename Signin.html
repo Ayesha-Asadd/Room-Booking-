@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body style="background-color: #fff8f1; font-family: Arial, sans-serif; margin: 0; height: 100vh; overflow: hidden;">
+
+    <!-- Main Container -->
+<div class="d-flex" style="width: 100%; height: calc(100vh - 60px);">
+    <!-- Left Side (Image Section) -->
+    <div class="flex-fill d-flex align-items-center justify-content-center" style="overflow: hidden;">
+        <img src="https://plus.unsplash.com/premium_photo-1661929519129-7a76946c1d38?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bHV4dXJ5JTIwaG90ZWx8ZW58MHx8MHx8fDA%3D.jpg" 
+            alt="Left Side Image" 
+            style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+
+    <!-- Right Side (Form Section) -->
+    <div class="flex-fill p-4" style="background-color: #ffffff; width: 50%; height: 100%; display: flex; justify-content: center; align-items: center;">
+        <!-- Login Form Content -->
+        <div class="container d-flex flex-column align-items-center mt-3 mb-0">
+            <img src="serena.png"  
+            style="width: 150px; height:150px;" alt="Headspace Logo">
+            <h3 class="mb-1 mt-0" style="font-weight: bold;">Log in</h3>
+            
+            <!-- Login Form -->
+            <form action="signin.php" method="post" class="w-100" style="max-width: 500px;" onsubmit="return validateForm()">
+                <div class="form-group">
+                    <input 
+                        type="email" 
+                        name="email" 
+                        id="email" 
+                        class="form-control" 
+                        placeholder="Email address" 
+                        style="height: 45px;" 
+                        required>
+                    <small id="emailError" class="form-text text-danger"></small>
+                </div>
+                <div class="form-group">
+                    <input 
+                        type="password" 
+                        name="password" 
+                        id="password" 
+                        class="form-control" 
+                        placeholder="Password" 
+                        style="height: 45px;" 
+                        required>
+                    <small id="passwordError" class="form-text text-danger"></small>
+                </div>
+                <div class="d-flex justify-content-between mb-3">
+                    <small>Don't have an account? <a href="signupp.html" style="color: #91547c;">Sign Up</a></small>
+                </div>
+                <button 
+                    type="submit" 
+                    class="btn btn-block" 
+                    id="loginButton" 
+                    style="background-color: #91547c; color: #fff; height: 45px; font-weight: bold;" 
+                    disabled>
+                    LOG IN
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    const emailField = document.getElementById('email');
+    const passwordField = document.getElementById('password');
+    const loginButton = document.getElementById('loginButton');
+    const emailError = document.getElementById('emailError');
+    const passwordError = document.getElementById('passwordError');
+
+    // Function to validate the form fields
+    function validateForm() {
+        let isValid = true;
+
+        // Email validation
+        if (!emailField.value.includes('@')) {
+            emailError.textContent = 'Email must include "@" symbol.';
+            isValid = false;
+        } else {
+            emailError.textContent = '';
+        }
+
+        // Password validation
+        if (passwordField.value.length < 8) {
+            passwordError.textContent = 'Password must be at least 8 characters long.';
+            isValid = false;
+        } else {
+            passwordError.textContent = '';
+        }
+
+        return isValid;
+    }
+
+    // Event listeners for real-time validation
+    function checkFields() {
+        const emailValid = emailField.value.includes('@');
+        const passwordValid = passwordField.value.length >= 8;
+
+        loginButton.disabled = !(emailValid && passwordValid);
+
+        // Update error messages in real-time
+        if (!emailValid) {
+            emailError.textContent = 'Email must include "@" symbol.';
+        } else {
+            emailError.textContent = '';
+        }
+
+        if (!passwordValid) {
+            passwordError.textContent = 'Password must be at least 8 characters long.';
+        } else {
+            passwordError.textContent = '';
+        }
+    }
+
+    emailField.addEventListener('input', checkFields);
+    passwordField.addEventListener('input', checkFields);
+</script>
+    <script src='https://code.jquery.com/jquery-3.5.1.slim.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'></script>
+</body>
+</html>
